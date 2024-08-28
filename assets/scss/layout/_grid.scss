@@ -1,0 +1,67 @@
+$gap: 24px;
+$columns-num: 12;
+
+.container {
+  max-width: 1320px;  // 1296 + 24 （因為盒模型"border-box"）
+  margin: 0 auto;
+  padding-left: calc($gap / 2);
+  padding-right: calc($gap / 2); // gutters on outside
+  @include pad{
+    max-width: 720px; //12*36+24*11 （看平板的格線系統）+ 12*2
+  }
+  @include mobile{
+    max-width: 372px; //同理
+  }
+}
+
+@media (max-width: 1320px) {
+  .container {
+      max-width: 100%;
+  }
+}
+
+.container-md-fluid{
+  max-width: 1320px;
+  padding: 0 12px;
+}
+
+.container-sm-full{
+  max-width: 1320px;
+  padding: 0 12px;
+  margin: 0 auto;
+}
+
+// .row {
+//   display: flex;
+//   flex-wrap: wrap;
+//   margin-right: -($gap/2);
+//   margin-left: -($gap/2);
+// }
+
+// @for $i from 1 through $columns-num{
+//   .col-#{$i} {
+//     width: 100% * ($i / $columns-num);
+//     padding-left: $gap/2;
+//     padding-right: $gap/2;
+//   }
+// }
+
+// @include pad{
+//   @for $i from 1 through $columns-num{
+//     .col-md-#{$i} {
+//       width: 100% * ($i / $columns-num);
+//       padding-left: $gap/2;
+//       padding-right: $gap/2;
+//     }
+//   }
+// }
+
+// @include mobile{
+//   @for $i from 1 through $columns-num{
+//     .col-sm-#{$i} {
+//       width: 100% * ($i / $columns-num);
+//       padding-left: $gap/2;
+//       padding-right: $gap/2;
+//     }
+//   }
+// }

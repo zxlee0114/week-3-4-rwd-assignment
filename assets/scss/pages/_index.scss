@@ -1,0 +1,189 @@
+.text-primary{
+    color: $primary;
+}
+
+.text-secondary{
+    color: $secondary;
+}
+
+.text-date{
+    color: $date
+}
+
+.text-light{
+    color: $light;
+}
+
+.bg-primary{
+    background: $primary;
+}
+
+.bg-light{
+    background: $light;
+}
+
+.bg-bg-light{
+    background: $bg-light;
+}
+
+.banner{
+    background-image: url("../images/home-header.png");
+    background-size: cover;
+    background-position: center center;
+    height: 787px;
+    @include pad{
+        background-image: url("../images/home-header-sm.png")
+    }
+    &-cta{
+        padding: 6px 12px;
+        background: $primary;
+    }
+    &-cta:hover{
+        background: $secondary;
+    }
+}
+
+@include mobile-larger{
+    .banner{
+        height: 396px;
+    }
+    .banner-title{
+        font-size: 24px;
+    }
+    .banner-subtitle{
+        font-size: 16px;
+    }
+    .mb-1{
+        margin-bottom: 4px;
+    }
+}
+
+.feature{
+    padding: 80px 0;
+
+    .card{
+        width: calc(25% - 18px);
+        @include pad{
+        width: calc(50% - 12px);
+        }
+        @include mobile{
+        width: 100%;
+        }
+    }
+}
+
+.classic{
+    padding: 80px 0;
+
+    .card-list{
+        @include pad{
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    .card{
+        width: calc(33% - 18px);
+        @include pad{
+            width: 100%;
+            max-width: 336px ;
+        }
+    }
+}
+
+.cobrand{
+    padding: 80px 0;
+    background-image: url("/assets/images/index-bg.png");
+    background-size: cover;
+    background-position: center center;
+    @include pad{
+        background-image: url(/assets/images/index-bg-md.png);
+    }
+    @include mobile{
+        padding: 40px 0;
+        background-image: url(/assets/images/index-bg-sm.png);
+    }
+    .card{
+        width: 50%;
+        @include pad{
+            width: 100%;
+        }
+    }
+}
+
+.recommend{
+    padding: 80px 0;
+    
+    .card{
+        border: 1px solid #DEE2E6;
+        border-radius: 4px;
+        box-shadow: 0px 2px 6px #00000029;
+        width: calc(25% - 18px);
+        height: 511px;
+        @include pad{
+            width: calc(50% - 12px);
+        }
+        @include mobile{
+            width: 100%;
+        }
+    }
+}
+
+.contact{
+    padding: 80px 0;
+    &-input{
+        outline: 0;
+        border: 1px solid black;
+        padding: 6px 12px;
+        opacity: 0.2;
+    }
+    &-btn{
+        max-width: 416px;
+        border: none;
+        padding: 16px 0;
+        cursor: pointer;
+    }
+
+}
+
+.fs-sm-6 {
+    @include mobile{
+        font-size: 24px;
+    }
+}
+
+.mb-sm-2{
+    @include mobile-larger{
+        margin-bottom: 8px;
+    }
+}
+
+.mb-sm-4{
+    @include mobile{
+        margin-bottom: 16px;
+    }
+}
+
+.mb-sm-6{
+    @include mobile{
+        margin-bottom: 24px;
+    }
+}
+
+.mb-md-6{
+    @include pad{
+        margin-bottom: 24px;
+    }
+}
+
+.w-md-83{
+    @include pad{
+        width: 83%;
+    }
+}
+
+.w-sm-100{
+    @include mobile{
+        width: 100%;
+    }
+}
