@@ -27,12 +27,12 @@
 }
 
 .banner{
-    background-image: url("../images/home-header.png");
+    background-image: url("/assets/images/home-header.png");
     background-size: cover;
     background-position: center center;
     height: 787px;
     @include pad{
-        background-image: url("../images/home-header-sm.png")
+        background-image: url("/assets/images/home-header-sm.png")
     }
     &-cta{
         padding: 6px 12px;
