@@ -136,6 +136,9 @@
         padding: 6px 12px;
         opacity: 0.2;
     }
+    &-input:focus{
+        opacity: 0.8;
+    }
     &-form textarea{
         resize: none;
     }
